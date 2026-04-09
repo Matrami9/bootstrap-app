@@ -8,18 +8,24 @@ const compat = new FlatCompat({
 });
 
 module.exports = [
-    js.configs.recommended,
-    ...compat.extends("google"),
-    {
-        languageOptions: {
-            globals: {
-                ...globals.node, 
-            },
-        },
-        rules: {
-            "valid-jsdoc": "off",
-            "require-jsdoc": "off",
-            "max-len": ["error", { "code": 120 }] 
-        },
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "commonjs",
+      globals: {
+        require: "readonly",
+        module: "readonly",
+        exports: "readonly",
+        process: "readonly",
+        console: "readonly",
+        __dirname: "readonly",
+      },
     },
+    rules: {
+      "semi": ["error", "always"],
+      "indent": ["error", 2],
+      "no-trailing-spaces": "error",
+      "space-before-function-paren": ["error", "never"],
+    },
+  },
 ];
