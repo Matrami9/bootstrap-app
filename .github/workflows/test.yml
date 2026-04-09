@@ -29,6 +29,15 @@ jobs:
           echo "Hello Github Actions"
           git ls-files
 
+      - name: Linter (Qualité du code)
+        run: npm run eslint:check
+
+      - name: Tests Unitaires (Logique mathématique)
+        run: npm run mocha:test
+
+      - name: Couverture de code
+        run: npm run nyc:run
+
 
 
 
