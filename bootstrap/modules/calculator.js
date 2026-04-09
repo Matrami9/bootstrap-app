@@ -43,14 +43,15 @@ class Calculator {
     return a - b;
   }
 
-  power(a, b) { //NEW FEATURE
-    if (b < 0)  
-        return 1/ a * this.power(a, b+1);
-    else if(b > 0)
-        return a * this.power(a, b - 1)
-    else
-        return 1;
-}
+  power(a, b) { // NEW FEATURE
+    if (b < 0) {
+      return 1/ a * this.power(a, b+1);
+    } else if (b > 0) {
+      return a * this.power(a, b - 1);
+    } else {
+      return 1;
+    }
+  }
 }
 
 module.exports = {Calculator};
