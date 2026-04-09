@@ -18,6 +18,7 @@ jobs:
 
       - name: Install
         run: npm ci
+        run: npm test
 
       - name : echo & liste des fichiers
         run: |
