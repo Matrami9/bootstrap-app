@@ -19,8 +19,10 @@ jobs:
       - name: Install
         run: npm ci
 
-
-
+      - name : echo & liste des fichiers
+        run: |
+          echo "Hello Github Actions"
+          git ls-files
 
 
 
