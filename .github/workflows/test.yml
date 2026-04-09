@@ -5,6 +5,7 @@ on: [push]
 jobs:
   my_first_job:
     runs-on: ubuntu-latest
+    
     defaults:
       run:
         working-directory: ./bootstrap
@@ -21,7 +22,6 @@ jobs:
 
       - name: Install
         run: npm ci
-        run: npm test
 
       - name : echo & liste des fichiers
         run: |
