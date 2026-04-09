@@ -10,4 +10,4 @@ with:
 node-version: 16.13.x
 cache: npm
 - name: Install
-run: npm c
+run: npm ci
