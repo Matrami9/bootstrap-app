@@ -55,19 +55,18 @@ describe('Calculator', () => {
             assert.equal(calc.divide(-5, 2), -2.5);
         })
     })
-    // ... tes tests de division juste au dessus ...
+  
 
   describe('Power', function() {
     it('should return 8 when calculating 2 power 3', function() {
-      // Assure-toi que l'objet s'appelle bien 'calculator' dans ton fichier
-      const result = calculator.pow(2, 3); 
+      const result = calc.pow(2, 3); 
       assert.strictEqual(result, 8);
     });
 
     it('should return 1 when calculating 10 power 0', function() {
-      const result = calculator.pow(10, 0);
+      const result = calc.pow(10, 0);
       assert.strictEqual(result, 1);
     });
   });
 
-}); // <--- C'est cette accolade qui doit être la TOUTE DERNIÈRE du fichier
+}); 
