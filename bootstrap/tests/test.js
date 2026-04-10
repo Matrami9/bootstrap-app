@@ -55,4 +55,19 @@ describe('Calculator', () => {
             assert.equal(calc.divide(-5, 2), -2.5);
         })
     })
+    describe('Power', function() {
+      it('should return 8 when calculating 2 power 3', function() {
+        const result = calculator.pow(2, 3);
+        if (result !== 8) {
+          throw new Error('Expected 8 but got ' + result);
+        }
+      });
+
+      it('should return 1 when calculating 10 power 0', function() {
+        const result = calculator.pow(10, 0);
+        if (result !== 1) {
+          throw new Error('Expected 1 but got ' + result);
+        }
+      });
+    });
 })
