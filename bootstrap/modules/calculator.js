@@ -51,7 +51,6 @@ class Calculator {
     } else {
       return 1;
     }
-    
   }
 }
 
