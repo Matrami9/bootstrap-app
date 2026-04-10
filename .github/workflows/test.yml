@@ -12,17 +12,18 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Passage en v4
 
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4 # Passage en v4
         with:
-          node-version: 16.13.x
-          cache: npm
-          cache-dependency-path: ./bootstrap/package-lock.json
-
+          node-version: 20
+          # Supprime temporairement les lignes cache pour "nettoyer" le serveur
+          
       - name: Install
-        run: npm ci
+        # On utilise install pour forcer une réinstallation propre
+        run: npm install 
+        working-directory: ./bootstrap
 
       - name : echo & liste des fichiers
         run: |
