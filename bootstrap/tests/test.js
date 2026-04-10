@@ -59,12 +59,12 @@ describe('Calculator', () => {
 
   describe('Power', function() {
     it('should return 8 when calculating 2 power 3', function() {
-      const result = calc.pow(2, 3); 
+      const result = calc.power(2, 3); 
       assert.strictEqual(result, 8);
     });
 
     it('should return 1 when calculating 10 power 0', function() {
-      const result = calc.pow(10, 0);
+      const result = calc.power(10, 0);
       assert.strictEqual(result, 1);
     });
   });
